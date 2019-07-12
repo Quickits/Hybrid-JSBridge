@@ -1,7 +1,7 @@
 {
-    "port": 8081,
-    "files": ["./dist/**/*.*"],
-    "server": {
-        "baseDir": "./dist"
-    }
+  "port": 8081,
+  "files": ["./dist/**/*.*"],
+  "server": {
+    "baseDir": "./dist"
+  }
 }
