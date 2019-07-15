@@ -65,5 +65,5 @@
   //   "./src/*.*"
   // ],
 
-  "files": ["src/ts/Core.ts", "src/ts/Test.ts"]
+  "files": ["src/ts/JSBridge.ts"]
 }

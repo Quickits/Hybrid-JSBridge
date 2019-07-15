@@ -2,9 +2,9 @@
   "name": "hybrid-jsbridge",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/ts/JSBridge.ts",
   "scripts": {
-    "server": "lite-server",
+    "server": "lite-server -c bs-config.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,9 +14,11 @@
     "gulp": "^4.0.2",
     "gulp-hash": "^4.2.2",
     "gulp-typescript": "^5.0.1",
+    "gulp-util": "^3.0.8",
     "lite-server": "^2.5.3",
     "tsify": "^4.0.1",
     "typescript": "^3.5.3",
-    "vinyl-source-stream": "^2.0.0"
+    "vinyl-source-stream": "^2.0.0",
+    "watchify": "^3.11.1"
   }
 }
