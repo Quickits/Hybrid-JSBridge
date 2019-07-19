@@ -1,13 +1,10 @@
 import Result from "./dto/Result";
 
-let global = <any>window;
+const global = window as any;
 
 global.QuickitsHybrid = {};
-global.QuickitsHybrid.invoke = function(params: string) {
-  console.log(params);
-  console.log("invoke");
-  let result: Result = JSON.parse(params);
-  console.log(result);
+global.QuickitsHybrid.invoke = (params: string) => {
+  const result: Result = JSON.parse(params);
 
   if (result.res_sn) {
     global.resultCallbacks[result.res_sn](result.value ? result.value : "");
@@ -20,11 +17,9 @@ global.resultCallbacks = {};
 class JSBridge {
   private requestCounter: number = 0;
 
-  constructor() {}
-
-  protected request(url: string, callback?: Function) {
+  protected request(url: string, callback?: () => void) {
     if (callback !== undefined) {
-      let req_sn = "sm_" + this.requestCounter++;
+      const req_sn = "sm_" + this.requestCounter++;
       url += "&req_sn=" + req_sn;
       global.resultCallbacks[req_sn] = callback;
     }

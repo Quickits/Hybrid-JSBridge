@@ -1,14 +1,26 @@
 {
-  "name": "hybrid-jsbridge",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/ts/JSBridge.ts",
+  "name": "quickits-hybrid-jsbridge",
+  "version": "1.0.1",
+  "description": "A hybird js brdige",
+  "main": "./dist/src/ts/JSBridge.js",
+  "types": "./dist/src/ts/JSBridge.d.ts",
+  "typings": "./dist/src/ts/JSBridge.d.ts",
   "scripts": {
     "server": "lite-server -c bs-config.json",
+    "prepare": "npm run rebuild",
+    "build": "tsc -p .",
+    "rebuild": "npm run clean && npm run lint && npm run build",
+    "clean": "rm -rf dist",
+    "lint": "tslint --project ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Gavin Liu",
   "license": "ISC",
+  "homepage": "https://github.com/Quickits/Hybrid-JSBridge",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Quickits/Hybrid-JSBridge.git"
+  },
   "devDependencies": {
     "browserify": "^16.3.0",
     "gulp": "^4.0.2",

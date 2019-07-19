@@ -1,6 +1,6 @@
 class Result {
-  value?: JSON;
-  res_sn: string = "";
+  public value?: JSON;
+  public res_sn: string = "";
 }
 
 export = Result;

@@ -1,0 +1,13 @@
+/.git/
+/.vscode/
+/docs/
+/node_modules/
+.gitignore
+.npmignore
+bs-config.json
+gulpfile.js
+tslint.json
+tsconfig.json
+src/
+yarn.lock
+*.log
